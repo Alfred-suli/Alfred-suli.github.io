@@ -22,16 +22,30 @@
 
 					<!-- Banner -->
 					<section id="banner">
-						<div class="content">
-							<header>
-								<h1>Hello, I'm Alfred</h1>
-								<p>Welcome to my portfolio – here are some of my projects.</p>
-							</header>
-						</div>
-						<span class="image object">
-							<img src="images/cover.jpg" alt="Cover image" />
-						</span>
-					</section>
+  <div class="content">
+    <header>
+      <h1>Hello, I'm Alfred</h1>
+      <p>Welcome to my portfolio – here are some of my projects.</p>
+    </header>
+  </div>
+  <span class="image object">
+    <img id="coverImage" src="images/alfred1.jpg" alt="Cover image" />
+  </span>
+</section>
+
+<!-- Script for image slideshow -->
+<script>
+  const photos = [
+    "images/alfred1.jpg",
+    "images/alfred2.jpg",
+    "images/alfred3.jpg"
+  ];
+  let i = 0;
+  setInterval(() => {
+    i = (i + 1) % photos.length;
+    document.getElementById("coverImage").src = photos[i];
+  }, 3000); // 每5秒切换一次
+</script>
 
 					<!-- Projects -->
 					<section>
@@ -111,3 +125,4 @@
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>
+
