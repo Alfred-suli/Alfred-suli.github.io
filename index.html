@@ -188,13 +188,32 @@
 </article>
 
 							<!-- Project 4 -->
-		<article>
+<article class="project-detail">
   <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 8px;">
     <source src="images/project4.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-  <h3>Project 4</h3>
-  <p>Short description of Project 4. Replace this text with your own introduction.</p>
+
+  <h3>Project 4: Particle-based Fluid Simulation with Compute Shader</h3>
+
+  <h4>Overview</h4>
+  <p>
+    This project implements a particle-based fluid simulation using OpenGL and Compute Shaders. 
+    The fluid is represented by particles carrying mass, velocity, and pressure, with all physics 
+    computations executed in parallel on the GPU. Rendering is achieved through instancing to 
+    efficiently draw thousands of particles in real time. My main contribution focused on the 
+    implementation and debugging of the Compute Shaders. 
+    The video above demonstrates the final 2D fluid simulation.
+  </p>
+
+  <h4>Key Implementations</h4>
+  <ul>
+    <li><strong>Particle Emitter:</strong> initializes particle positions and velocities.</li>
+    <li><strong>Compute Shader Physics:</strong> density and near-density calculation within a smoothing radius; 
+        pressure and near-pressure force computation; gravity and viscosity terms for stability.</li>
+    <li><strong>Instanced Rendering:</strong> efficient batch drawing of large particle sets.</li>
+    <li><strong>Visualization:</strong> particle color encodes velocity magnitude (faster particles appear redder).</li>
+  </ul>
 </article>
 
 							<!-- Project 5 -->
@@ -238,6 +257,7 @@
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>
+
 
 
 
