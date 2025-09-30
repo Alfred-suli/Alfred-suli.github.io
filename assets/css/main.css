@@ -2338,6 +2338,36 @@ button,
   display: block;
 }
 
+/* 详情区域里的图片排版 */
+.project.expandable .details img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 多张图时用网格排布 */
+.project.expandable .details .media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* figure 和说明文字 */
+.project.expandable .details figure {
+  margin: 0;
+  text-align: center;
+}
+
+.project.expandable .details figcaption {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
+
 
 
 
