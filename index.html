@@ -62,12 +62,56 @@
 						<div class="posts">
 
 							<!-- Project 1 -->
-							<article>
-								<a href="#" class="image"><img src="images/project1.gif" alt="Project 1" /></a>
-								<h3>Project 1</h3>
-								<p>Short description of Project 1. Replace this text with your own introduction.</p>
-							</article>
+						<section id="project1" class="project-detail">
+  <header class="major">
+    <h2>Cloth Simulation</h2>
+    <p>
+      A real-time cloth simulation using GPU compute shaders. 
+      Features wind dynamics, structural constraints, and realistic bending.
+    </p>
+  </header>
 
+  <!-- 实现要点 -->
+  <div class="stack">
+    <h3>Key Implementation Points</h3>
+    <ul>
+      <li>Verlet integration for stable particle updates</li>
+      <li>Structural, shear, and bending constraints (XPBD-style)</li>
+      <li>Wind force with noise-driven gusts and normal-based influence</li>
+      <li>GPU compute shaders with SSBO for particle data</li>
+    </ul>
+  </div>
+
+  <!-- GIF 展示 -->
+  <div class="media-grid">
+    <figure>
+      <img src="images/cloth_overview.gif" alt="Overview" />
+      <figcaption>Overview of the cloth behavior under gravity + wind.</figcaption>
+    </figure>
+    <figure>
+      <img src="images/cloth_constraints.gif" alt="Constraints" />
+      <figcaption>Constraint iterations stabilizing the fabric structure.</figcaption>
+    </figure>
+    <figure>
+      <img src="images/cloth_gust.gif" alt="Gust response" />
+      <figcaption>Dynamic gust response generating large-scale waves.</figcaption>
+    </figure>
+    <figure>
+      <img src="images/cloth_bending.gif" alt="Bending effects" />
+      <figcaption>Bending constraints producing fine wrinkles.</figcaption>
+    </figure>
+  </div>
+
+  <!-- 改进目标 -->
+  <div class="stack">
+    <h3>Future Improvements</h3>
+    <p>
+      Plan to add self-collision detection, optimize constraint solving 
+      with parallelization, and explore more realistic aerodynamics for 
+      wind–cloth interaction.
+    </p>
+  </div>
+</section>
 							<!-- Project 2 -->
 							<article>
 								<video autoplay loop muted playsinline>
@@ -135,6 +179,7 @@
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>
+
 
 
 
