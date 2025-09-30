@@ -2301,3 +2301,13 @@ button,
   margin-top: 0.5rem;
 }
 
+.project-detail img {
+  max-width: 400px;   /* 限制最大宽度，不再 100% 拉满 */
+  width: 100%;        /* 小屏幕下仍自适应 */
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+  margin: 0 auto;     /* 居中对齐 */
+}
+
+
