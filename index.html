@@ -344,8 +344,21 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+document.querySelectorAll('.project.expandable .toggle-btn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    const article = e.target.closest('.project.expandable');
+    article.classList.toggle('open');
+    btn.textContent = article.classList.contains('open') 
+      ? "[Click to collapse]" 
+      : "[Click to read more]";
+  });
+});
+</script>
+
 	</body>
 </html>
+
 
 
 
