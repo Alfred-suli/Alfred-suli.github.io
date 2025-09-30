@@ -2328,5 +2328,17 @@ button,
   border-radius: 6px;
 }
 
+/* 默认隐藏 details */
+.project.expandable .details {
+  display: none;
+}
+
+/* 当 article 有 open 类时展开 */
+.project.expandable.open .details {
+  display: block;
+}
+
+
+
 
 
