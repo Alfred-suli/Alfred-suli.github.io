@@ -217,12 +217,39 @@
 </article>
 
 							<!-- Project 5 -->
-							<article>
-								<a href="#" class="image"><img src="images/project5.png" alt="Project 5" /></a>
-								<h3>Project 5</h3>
-								<p>Short description of Project 5. Replace this text with your own introduction.</p>
-							</article>
+<article class="project-detail">
+  <h2>Project 5: Optimizing Ray Tracing in The Rest of Your Life</h2>
 
+  <h4>Overview</h4>
+  <p>
+    This project focuses on optimizing the renderer from the well-known 
+    <em>Ray Tracing in One Weekend</em> series (<em>The Rest of Your Life</em>). 
+    Although the implementation remains CPU-based, several improvements were introduced 
+    to significantly accelerate rendering and improve image quality. 
+    The optimized version reduces render time from about <strong>75 seconds to 19 seconds</strong>, 
+    while producing cleaner images with reduced noise.
+  </p>
+
+  <h4>Key Optimizations</h4>
+  <ul>
+    <li><strong>Multithreading with Adaptive Sampling</strong> – Replaced the original single-threaded renderer with a multi-threaded version using <code>std::thread</code>, adaptive sampling based on variance, and sample clamping.</li>
+    <li><strong>Iterative Path Tracing with Next-Event Estimation (NEE)</strong> – Converted recursive path tracing into an iterative loop, added explicit light sampling, multiple importance sampling (MIS), and Russian Roulette termination.</li>
+    <li><strong>High-Quality Random Number Generation (PCG)</strong> – Replaced the default random generator with PCG, improving sample distribution and reducing noise.</li>
+    <li><strong>BVH Integration</strong> – Used the existing BVH structure to reduce ray–scene intersection overhead.</li>
+  </ul>
+
+  <h4>Results</h4>
+  <div class="media-grid">
+    <figure>
+      <img src="images/imageOriginal.png" alt="Original Rendering" />
+      <figcaption>Original rendering (~75s, noisy).</figcaption>
+    </figure>
+    <figure>
+      <img src="images/newImage.png" alt="Optimized Rendering" />
+      <figcaption>Optimized rendering (~19s, cleaner output).</figcaption>
+    </figure>
+  </div>
+</article>
 							<!-- Project 6 -->
 							<article>
 								<a href="#" class="image"><img src="images/project6.gif" alt="Project 6" /></a>
@@ -257,6 +284,7 @@
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>
+
 
 
 
