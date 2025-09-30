@@ -106,13 +106,47 @@
 </article>
 
 							<!-- Project 2 -->
-							<article>
-								<video autoplay loop muted playsinline>
-									<source src="images/project2.mp4" type="video/mp4">
-								</video>
-								<h3>Project 2</h3>
-								<p>Short description of Project 2. Replace this text with your own introduction.</p>
-							</article>
+<article class="project-detail">
+  <h2>Project 2: Terrain Rendering with Procedural Generation</h2>
+
+  <h4>Overview</h4>
+  <p>
+    This project focuses on procedural terrain rendering based on heightmap generation. 
+    The system supports multiple algorithms for creating diverse terrains and is built on 
+    a custom framework developed with OpenGL. The framework integrates camera, GUI, 
+    heightmap generation, mesh construction, and rendering into a cohesive system.
+  </p>
+
+  <h4>Key Implementations</h4>
+
+  <h5>Heightmap Generation Methods</h5>
+
+  <figure>
+    <img src="images/terrain_perlin.gif" alt="Perlin Noise Terrain" />
+    <figcaption><strong>Perlin Noise</strong> — smooth and natural variation.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/terrain_fault.gif" alt="Fault Formation Terrain" />
+    <figcaption><strong>Fault Formation</strong> — sharp ridges and cliffs.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/terrain_midpoint.gif" alt="Midpoint Displacement Terrain" />
+    <figcaption><strong>Midpoint Displacement</strong> — fractal-style mountainous terrain.</figcaption>
+  </figure>
+
+  <h5>Configurable Parameters</h5>
+  <p>
+    Resolution, iteration count, and elevation range can be adjusted to produce varied terrain.
+  </p>
+
+  <h5>Runtime Control</h5>
+  <p>
+    Heightmaps can be regenerated and switched between algorithms during program execution.
+  </p>
+</article>
+
 
 							<!-- Project 3 -->
 							<article>
@@ -172,6 +206,7 @@
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>
+
 
 
 
