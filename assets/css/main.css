@@ -2310,4 +2310,23 @@ button,
   margin: 0 auto;     /* 居中对齐 */
 }
 
+/* 折叠详情默认隐藏 */
+.project.expandable .details {
+  display: none;
+  margin-top: 1rem;
+}
+.project.expandable.open .details {
+  display: block;
+}
+.project.expandable .toggle-btn {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+
 
