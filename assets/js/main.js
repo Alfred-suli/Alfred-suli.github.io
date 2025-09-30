@@ -259,4 +259,20 @@
 
 			});
 
+
 })(jQuery);
+
+
+<article class="project expandable">
+  <h3>Master Thesis – High-Contrast Rendering</h3>
+  <p>
+    In collaboration with IO Interactive, I designed and implemented customizable high-contrast modes 
+    in a modern game engine to improve accessibility for low-vision players.  
+  </p>
+  <button class="toggle-btn">[Click to read more]</button>
+  
+  <!-- 折叠详情 -->
+  <div class="details">
+    ...
+  </div>
+</article>
