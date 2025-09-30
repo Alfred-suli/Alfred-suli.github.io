@@ -2368,6 +2368,33 @@ button,
 }
 
 
+/* Project 6 详情排版优化 */
+.project.expandable .details img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* 通用多图网格 */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* 说明文字美化 */
+.media-grid figure {
+  margin: 0;
+  text-align: center;
+}
+.media-grid figcaption {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
 
 
 
