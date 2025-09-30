@@ -63,19 +63,21 @@
 
 							<!-- Project 1 -->
 						<article id="project1" class="project-detail">
-  <h2>Cloth Simulation</h2>
+  <h2>Cloth Simulation based on OpenGL and computer shader</h2>
   <p>
-    A real-time cloth simulation using GPU compute shaders. 
-    Features wind dynamics, structural constraints, and realistic bending.
+      The cloth is represented by particles and springs using a mass–spring model (structural, shearing, bending). 
+	  All forces and integration are computed in parallel on the GPU to achieve real-time cloth simulation.
   </p>
 
   <!-- 实现要点 -->
   <h3>Key Implementation Points</h3>
   <ul>
-    <li>Verlet integration for stable particle updates</li>
-    <li>Structural, shear, and bending constraints (XPBD-style)</li>
-    <li>Wind force with noise-driven gusts and normal-based influence</li>
-    <li>GPU compute shaders with SSBO for particle data</li>
+    <li>Particle System: Verlet/semi-implicit integration with position, velocity, force, and fixed-point flags.</li>
+    <li>Spring Constraints: Structural, shearing, and bending springs, evaluated in parallel on the GPU.</li>
+    <li>GPU Architecture: Particle and spring data stored in SSBOs, with Compute Shaders handling force accumulation and updates.</li>
+    <li>Color Constraint: Partitioning constraints to prevent data races during parallel updates.</li>
+	<li>Self-Collision: Neighbor-based detection prevents cloth self-intersections, maintaining thickness and producing realistic folds.<li>
+	<li>Collision Handling: Enable Collision with other objects and plane.<li>	
   </ul>
 
   <!-- GIF 展示 -->
@@ -85,11 +87,11 @@
       <figcaption>Overview of the cloth behavior under gravity + wind.</figcaption>
     </figure>
     <figure>
-      <img src="images/collision_with_sphere.png" alt="Collision" style="width:50%;" />
+      <img src="images/collision_with_sphere.png" alt="Collision" style="width:30%;" />
       <figcaption>Collision with sphere.</figcaption>
     </figure>
     <figure>
-      <img src="images/collision_with_cylinder.png" alt="Collision" style="width:50%;" />
+      <img src="images/collision_with_cylinder.png" alt="Collision" style="width:30%;" />
       <figcaption>Collision with cylinder.</figcaption>
     </figure>
   </div>
@@ -97,9 +99,9 @@
   <!-- 改进目标 -->
   <h3>Future Improvements</h3>
   <p>
-    Plan to add self-collision detection, optimize constraint solving 
-    with parallelization, and explore more realistic aerodynamics for 
-    wind–cloth interaction.
+  I aim to explore an alternative architecture beyond the traditional particle–spring model, by adopting more advanced approaches such as finite element methods (FEM) on triangular meshes. 
+  A preliminary framework has already been implemented, though stability remains a challenge. 
+  Future work will focus on improving robustness and experimenting with more advanced cloth simulation techniques.
   </p>
 </article>
 
@@ -170,6 +172,7 @@
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>
+
 
 
 
