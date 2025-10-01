@@ -2398,7 +2398,7 @@ button,
 
 /* --- Custom Background --- */
 body {
-  background: url("images/pic05.jpg") no-repeat center center fixed;
+  background: url("images/pic06.jpg") no-repeat center center fixed;
   background-size: cover;  /* 背景铺满 */
   color: #fff;             /* 白色文字 */
 }
@@ -2413,6 +2413,7 @@ body::before {
   background: rgba(0,0,0,0.4); /* 半透明黑色遮罩 */
   z-index: -1;
 }
+
 
 
 
