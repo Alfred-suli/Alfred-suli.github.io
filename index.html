@@ -22,44 +22,45 @@
 
 					<!-- Banner -->
 					<section id="banner">
-  <div class="content">
-<header>
-  <h1>Hello, I'm SU LI (Alfred)</h1>
-  <p>
-    I am passionate about <strong>Computer Graphics</strong>, 
-    <strong>GPU Development</strong>, 
-    <strong>VR/AR</strong>, and 
-    <strong>Computer Vision</strong>.
-    <br>
-    Below are some projects I have worked on.
-  </p>
-</header>
-  </div>
-  <span class="image object">
-    <img id="coverImage" src="images/alfred1.jpg" alt="Cover image" />
-  </span>
-</section>
+					  <div class="content">
+						<header>
+						  <h1>Hello, I'm SU LI (Alfred)</h1>
+						  <p>
+							I am passionate about <strong>Computer Graphics</strong>, 
+							<strong>GPU Development</strong>, 
+							<strong>VR/AR</strong>, and 
+							<strong>Computer Vision</strong>.
+							<br>
+							Below are some projects I have worked on.
+						  </p>
+						</header>
+					  </div>
+					  <span class="image object">
+						<img id="coverImage" src="images/alfred1.jpg" alt="Cover image" />
+					  </span>
+					</section>
 
-<!-- Script for image slideshow -->
-<script>
-  const photos = [
-    "images/alfred1.jpg",
-    "images/alfred2.jpg",
-    "images/alfred3.jpg"
-  ];
-  let i = 0;
-  setInterval(() => {
-    i = (i + 1) % photos.length;
-    document.getElementById("coverImage").src = photos[i];
-  }, 3000); // 每5秒切换一次
-</script>
+					<!-- Script for image slideshow -->
+					<script>
+					  const photos = [
+						"images/alfred1.jpg",
+						"images/alfred2.jpg",
+						"images/alfred3.jpg"
+					  ];
+					  let i = 0;
+					  setInterval(() => {
+						i = (i + 1) % photos.length;
+						document.getElementById("coverImage").src = photos[i];
+					  }, 3000);
+					</script>
 
-					<!-- Projects -->
+					<!-- Computer Graphics Projects -->
 					<section>
 						<header class="major">
-							<h2>Projects</h2>
+							<h2>Computer Graphics Projects</h2>
 						</header>
 						<div class="posts">
+
 
 							<!-- Project 1 -->
 						<article id="project1" class="project-detail">
@@ -317,8 +318,47 @@
     </p>
   </div>
 </article>
+						</div>
+					</section>
 
+					<!-- VR/AR Projects -->
+					<section>
+						<header class="major">
+							<h2>VR/AR Projects</h2>
+						</header>
+						<div class="posts">
 
+							<!-- VR Project Example -->
+							<article class="project-detail">
+							  <h2>VR Project: Immersive Security Training Game</h2>
+							  <p>
+								A VR prototype developed in Unity focusing on <strong>security training</strong>.  
+								Players interact with real-world scenarios in a virtual environment using 
+								VR headsets and controllers, improving situational awareness and decision making.
+							  </p>
+							  <div class="media-grid">
+								<figure>
+								  <img src="images/vr_project1.png" alt="VR Game Screenshot">
+								  <figcaption>Gameplay screenshot of VR security training</figcaption>
+								</figure>
+							  </div>
+							</article>
+
+							<!-- AR Project Example -->
+							<article class="project-detail">
+							  <h2>AR Project: LEGO Assembly Assistant</h2>
+							  <p>
+								An AR-based system built in Unity to guide users through LEGO assembly.  
+								Real-time object tracking overlays <strong>3D instructions</strong> directly on the 
+								physical LEGO bricks, helping users assemble models efficiently.
+							  </p>
+							  <div class="media-grid">
+								<figure>
+								  <img src="images/ar_lego.png" alt="AR LEGO Assembly">
+								  <figcaption>AR LEGO assembly guidance</figcaption>
+								</figure>
+							  </div>
+							</article>
 
 						</div>
 					</section>
@@ -336,7 +376,6 @@
 
 				</div>
 			</div>
-
 		</div>
 
 		<!-- Scripts -->
@@ -346,22 +385,19 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script>
-document.querySelectorAll('.project.expandable .toggle-btn').forEach(btn => {
-  btn.addEventListener('click', e => {
-    const article = e.target.closest('.project.expandable');
-    article.classList.toggle('open');
-    btn.textContent = article.classList.contains('open') 
-      ? "[Click to collapse]" 
-      : "[Click to read more]";
-  });
-});
-</script>
+		document.querySelectorAll('.project.expandable .toggle-btn').forEach(btn => {
+		  btn.addEventListener('click', e => {
+			const article = e.target.closest('.project.expandable');
+			article.classList.toggle('open');
+			btn.textContent = article.classList.contains('open') 
+			  ? "[Click to collapse]" 
+			  : "[Click to read more]";
+		  });
+		});
+		</script>
 
 	</body>
 </html>
-
-
-
 
 
 
