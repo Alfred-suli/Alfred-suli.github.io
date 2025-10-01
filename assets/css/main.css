@@ -2395,12 +2395,9 @@ button,
   margin-top: 0.3rem;
 }
 
-
-/* --- Custom Background --- */
 body {
-  background: url("images/pic06.jpg") no-repeat center center fixed;
-  background-size: cover;  /* 背景铺满 */
-  color: #fff;             /* 白色文字 */
+  background: url("images/pic05.jpg");
+  background-size: cover;
 }
 
 
